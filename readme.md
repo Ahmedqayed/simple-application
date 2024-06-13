@@ -12,3 +12,11 @@ i create main.tf terraform file to create azure componant and database
 and for initialize terraform we should run <terraform init> then to apply terraform we should run <terraform apply>
 ====================================================================================================================
 then i create pipline (auzre-piplines.yml) to automates the process of building, testing, and preparing the application for deployment, ensuring consistency and repeatability
+===============================================================================================================================================================================
+Scalability:
+VMSS: Automatically adjusts the number of VMs based on demand.App Service Autoscaling: Automatically scales the number of instances for web apps.
+AKS: Provides container orchestration with automatic scaling.
+Security
+NSGs: Control inbound and outbound traffic to VMs.
+Managed Identities: Securely connect to Azure services without storing credentials.
+Firewall Rules: Protect your database by allowing access only from specific IP addresses.

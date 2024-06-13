@@ -1,20 +1,14 @@
-## Overview
-This repository contains creating a simple HTTP API, deploying it to Azure, and setting up CI/CD with Azure DevOps.
-
-## Application
-The application is a simple Flask API with a /live endpoint that checks the database connection.
-
-## Infrastructure as Code (IaC)
-Terraform is used to provision Azure resources, including a PostgreSQL database.
-
-## Deployment
-The application is containerized using Docker and deployed to Azure.
-
-## CI/CD
-Azure DevOps is used for continuous integration and continuous deployment.
-
-## Scalability and Security
-The solution includes configurations for scalability using Azure VMSS and security using network security groups.
-
-## Logging and Monitoring
-Basic logging is implemented, and Azure Monitor is used for monitoring.
+##overview
+===========
+i create new repository with name simple-application then create new branch with name dev
+in our repository 4 file related to out python application (app.py, requiremnet.txt, Dockerfile and .env)
+our simple application that is an 'as easy as possible' HTTP API, It should have a /live endpoint.
+our application with the below responses:
+- Well done: if the application was able to connect with a database
+- Maintenance: if some error occurred during the connection with the database
+The application will read the PORT and DATABASE URL from .env file
+===================================================================================================================
+i create main.tf terraform file to create azure componant and database
+and for initialize terraform we should run <terraform init> then to apply terraform we should run <terraform apply>
+====================================================================================================================
+then i create pipline (auzre-piplines.yml) to automates the process of building, testing, and preparing the application for deployment, ensuring consistency and repeatability
